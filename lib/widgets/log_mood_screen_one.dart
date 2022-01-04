@@ -50,7 +50,7 @@ class _LogMoodScreenOneState extends State<LogMoodScreenOne> {
         else {
 
           //add one new mood
-          oneEntry.eachMood.add(OneMood(
+          oneEntry.eachMood.add( new OneMood(
               moodPrimary: PrimaryMoods.Joy,
               moodSecondary: SecondaryMoods.joy_Proud,
               strength: 10,
@@ -69,7 +69,7 @@ class _LogMoodScreenOneState extends State<LogMoodScreenOne> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Pick mood"),
+        title: const Text("Pick a mood"),
 
         actions: <Widget>[
           Padding(

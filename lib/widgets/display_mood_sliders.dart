@@ -14,7 +14,7 @@ class DisplayMoodSliders extends StatefulWidget {
 
 class _DisplayMoodSliders extends State<DisplayMoodSliders> {
 
-  double currentSliderValue = 1;
+
 
   int arraylength= selectedDisplayMoods.length;
 
@@ -27,17 +27,16 @@ class _DisplayMoodSliders extends State<DisplayMoodSliders> {
 
           children:
 
-          selectedDisplayMoods.map((oneEmotion) {
+          oneEntry.eachMood.map((oneEmotion) {
 
             oneSubEmotion = oneEmotion;
-
 
 
            // currentSliderValue = sliders.elementAt(0);
 
             //displaying widgets
 
-            return DisplayOneSlider();
+            return DisplayOneSlider(md: oneEmotion,);
           }).toList(),
 
 

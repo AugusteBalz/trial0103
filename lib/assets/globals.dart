@@ -175,6 +175,6 @@ final List<MoodEntry> moodEntryList = [
   )
 ];
 
-String oneSubEmotion = "help pls";
+OneMood oneSubEmotion = OneMood(moodPrimary: PrimaryMoods.Love, moodSecondary: SecondaryMoods.joy_Proud, strength: 0, color: Colors.grey);
 
 MoodEntry oneEntry = MoodEntry(id: "a1", dateTime: DateTime.now(), eachMood: []);
