@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:trial0103/assets/colors_of_mood.dart';
+import 'package:trial0103/assets/globals.dart';
 import 'package:trial0103/models/blueprint_mood.dart';
 import 'package:trial0103/models/moods.dart';
 
 /*
-class which holds all emotions asocciated with name, primary and secondary mood and its color
+class which holds all emotions associated with name, primary and secondary mood and its color
 
  */
 
@@ -92,16 +93,72 @@ class ConstantsOfMood {
       moodSecondary: SecondaryMoods.love_Appreciative,
       color: loveMoodColor);
 
+  //JOY
+
+  BlueprintMood PROUD = BlueprintMood(
+      name: "proud",
+      moodPrimary: PrimaryMoods.Love,
+      moodSecondary: SecondaryMoods.joy_Proud,
+      color: joyMoodColor);
 
 
+  BlueprintMood CHEERFUL = BlueprintMood(
+      name: "cheerful",
+      moodPrimary: PrimaryMoods.Love,
+      moodSecondary: SecondaryMoods.joy_Cheerful,
+      color: joyMoodColor);
 
 
+  BlueprintMood PEACEFUL = BlueprintMood(
+      name: "peaceful",
+      moodPrimary: PrimaryMoods.Love,
+      moodSecondary: SecondaryMoods.joy_Peaceful,
+      color: joyMoodColor);
+
+  BlueprintMood PLEASED = BlueprintMood(
+      name: "pleased",
+      moodPrimary: PrimaryMoods.Love,
+      moodSecondary: SecondaryMoods.joy_Pleased,
+      color: joyMoodColor);
+
+  BlueprintMood EAGER = BlueprintMood(
+      name: "eager",
+      moodPrimary: PrimaryMoods.Love,
+      moodSecondary: SecondaryMoods.joy_Eager,
+      color: joyMoodColor);
+
+  BlueprintMood HAPPY = BlueprintMood(
+      name: "happy",
+      moodPrimary: PrimaryMoods.Love,
+      moodSecondary: SecondaryMoods.joy_Happy,
+      color: joyMoodColor);
 
 
+  //SURPRISE
 
+  BlueprintMood AMAZED = BlueprintMood(
+      name: "amazed",
+      moodPrimary: PrimaryMoods.Surprise,
+      moodSecondary: SecondaryMoods.surprise_Amazed,
+      color: surpriseMoodColor);
 
+  BlueprintMood CONFUSED = BlueprintMood(
+      name: "confused",
+      moodPrimary: PrimaryMoods.Surprise,
+      moodSecondary: SecondaryMoods.surprise_Confused,
+      color: surpriseMoodColor);
 
+  BlueprintMood STUNNED = BlueprintMood(
+      name: "stunned",
+      moodPrimary: PrimaryMoods.Surprise,
+      moodSecondary: SecondaryMoods.surprise_Stunned,
+      color: surpriseMoodColor);
 
+  BlueprintMood SHOCKED = BlueprintMood(
+      name: "shocked",
+      moodPrimary: PrimaryMoods.Surprise,
+      moodSecondary: SecondaryMoods.surprise_Shocked,
+      color: surpriseMoodColor);
 
 
 
@@ -119,4 +176,43 @@ class ConstantsOfMood {
       moodPrimary: PrimaryMoods.Sad,
       moodSecondary: SecondaryMoods.sad_Dissapointed,
       color: sadMoodColor);
+
+  BlueprintMood MISERABLE = BlueprintMood(
+      name: "miserable",
+      moodPrimary: PrimaryMoods.Sad,
+      moodSecondary: SecondaryMoods.sad_Miserable,
+      color: sadMoodColor);
+
+  BlueprintMood GUILTY = BlueprintMood(
+      name: "guilty",
+      moodPrimary: PrimaryMoods.Sad,
+      moodSecondary: SecondaryMoods.sad_Guilty,
+      color: sadMoodColor);
+
+  BlueprintMood DEPRESSED = BlueprintMood(
+      name: "depressed",
+      moodPrimary: PrimaryMoods.Sad,
+      moodSecondary: SecondaryMoods.sad_Depressed,
+      color: sadMoodColor);
+
+
+
+
+  //OTHER
+
+
+  BlueprintMood EMPTY = BlueprintMood(
+      name: "empty",
+      moodPrimary: PrimaryMoods.Other,
+      moodSecondary: SecondaryMoods.other_Empty,
+      color: otherMoodColor);
+
+  BlueprintMood SHAMEFUL = BlueprintMood(
+      name: "shameful",
+      moodPrimary: PrimaryMoods.Other,
+      moodSecondary: SecondaryMoods.other_Shameful,
+      color: otherMoodColor);
+
+
+
 }

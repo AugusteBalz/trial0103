@@ -1,6 +1,7 @@
 library mood_as_classes.globals;
 
 import 'package:flutter/material.dart';
+import 'package:trial0103/assets/colors_of_mood.dart';
 import 'package:trial0103/models/blueprint_mood.dart';
 import 'package:trial0103/models/mood_entries.dart';
 import 'package:trial0103/models/moods.dart';
@@ -26,6 +27,43 @@ List<String> displayMoods = [
   "romantic",
   "sentimental",
   "appreciative",
+
+  //-------
+
+
+
+  //JOY
+
+  "proud",
+  "cheerful",
+  "peaceful",
+  "pleased",
+
+
+  //SURPRISE
+  "amazed",
+  "confused",
+  "stunned",
+  "shocked",
+
+
+  //SAD
+
+  "lonely",
+  "disappointed",
+  "miserable",
+  "guilty",
+  "depressed",
+
+
+  //OTHER
+
+  "empty",
+  "shameful",
+
+
+
+
 ];
 
 List<String> selectedDisplayMoods = [];
@@ -53,8 +91,49 @@ Map<String, BlueprintMood> nameToBlueprint = {
   "sentimental": wholeList.SENTIMENTAL,
   "appreciative": wholeList.APPRECIATIVE,
 
+  //JOY
+
+  "proud" : wholeList.PROUD,
+  "cheerful" : wholeList.CHEERFUL,
+  "peaceful" : wholeList.PEACEFUL,
+  "pleased" : wholeList.PLEASED,
+
+
+  //SURPRISE
+  "amazed": wholeList.AMAZED,
+  "confused": wholeList.CONFUSED,
+  "stunned": wholeList.STUNNED,
+  "shocked": wholeList.SHOCKED,
+
+
+  //SAD
+
   "lonely": wholeList.LONELY,
   "disappointed": wholeList.DISAPPOINTED,
+  "miserable": wholeList.MISERABLE,
+  "guilty": wholeList.GUILTY,
+  "depressed": wholeList.DEPRESSED,
+
+
+  //OTHER
+
+  "empty": wholeList.EMPTY,
+  "shameful": wholeList.SHAMEFUL,
+
+
+};
+
+Map<PrimaryMoods, Color>  primaryColors= {
+
+  PrimaryMoods.Joy : joyMoodColor,
+  PrimaryMoods.Angry : angryMoodColor,
+  PrimaryMoods.Fearful : fearMoodColor,
+  PrimaryMoods.Love : loveMoodColor,
+  PrimaryMoods.Sad : sadMoodColor,
+  PrimaryMoods.Surprise : surpriseMoodColor,
+  PrimaryMoods.Other : otherMoodColor,
+
+
 };
 
 final List<MoodEntry> moodEntryList = [
