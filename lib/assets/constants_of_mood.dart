@@ -97,39 +97,39 @@ class ConstantsOfMood {
 
   BlueprintMood PROUD = BlueprintMood(
       name: "proud",
-      moodPrimary: PrimaryMoods.Love,
+      moodPrimary: PrimaryMoods.Joy,
       moodSecondary: SecondaryMoods.joy_Proud,
       color: joyMoodColor);
 
 
   BlueprintMood CHEERFUL = BlueprintMood(
       name: "cheerful",
-      moodPrimary: PrimaryMoods.Love,
+      moodPrimary: PrimaryMoods.Joy,
       moodSecondary: SecondaryMoods.joy_Cheerful,
       color: joyMoodColor);
 
 
   BlueprintMood PEACEFUL = BlueprintMood(
       name: "peaceful",
-      moodPrimary: PrimaryMoods.Love,
+      moodPrimary: PrimaryMoods.Joy,
       moodSecondary: SecondaryMoods.joy_Peaceful,
       color: joyMoodColor);
 
   BlueprintMood PLEASED = BlueprintMood(
       name: "pleased",
-      moodPrimary: PrimaryMoods.Love,
+      moodPrimary: PrimaryMoods.Joy,
       moodSecondary: SecondaryMoods.joy_Pleased,
       color: joyMoodColor);
 
   BlueprintMood EAGER = BlueprintMood(
       name: "eager",
-      moodPrimary: PrimaryMoods.Love,
+      moodPrimary: PrimaryMoods.Joy,
       moodSecondary: SecondaryMoods.joy_Eager,
       color: joyMoodColor);
 
   BlueprintMood HAPPY = BlueprintMood(
       name: "happy",
-      moodPrimary: PrimaryMoods.Love,
+      moodPrimary: PrimaryMoods.Joy,
       moodSecondary: SecondaryMoods.joy_Happy,
       color: joyMoodColor);
 
