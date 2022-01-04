@@ -53,13 +53,13 @@ class _LogMoodScreenTwoState extends State<LogMoodScreenTwo> {
               )),
         ],
       ),
-      body: Center(
-        child: Column(
-          children: [
-            //TODO:display sliders with subemotion names
+      body: SingleChildScrollView(
+        child: Container(
 
+          padding: EdgeInsets.only(top: 40),
+          child: Center(
 
-            Column(
+            child: Column(
               //map the list of moods to the widgets
               //"for each moodlog "md" draw a widget"
 
@@ -152,9 +152,7 @@ class _LogMoodScreenTwoState extends State<LogMoodScreenTwo> {
                     );
               }).toList(),
             ),
-            //when person fills up all the fields on both screens we can commit
-            // NewMood(_addNewMoodEntry),
-          ],
+          ),
         ),
       ),
     );

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:trial0103/assets/globals.dart';
 import 'package:trial0103/models/one_mood.dart';
+import 'package:trial0103/models/slider_widget.dart';
 
 class DisplayOneSlider extends StatefulWidget {
   final OneMood md;
@@ -21,17 +22,12 @@ class _DisplayOneSliderState extends State<DisplayOneSlider> {
   Widget build(BuildContext context) {
 
 
-    return Slider(
-      value: currentSliderValue,
-      max: 10,
-      divisions: 10,
-      label: currentSliderValue.round().toString(),
-      onChanged: (double value) {
-        setState(() {
-          widget.md.strength = value.toInt();
-          currentSliderValue = value;
-        });
-      },
+    return Column(
+      children: [
+
+        SliderWidget(md: widget.md,),
+
+      ],
     );
   }
 }

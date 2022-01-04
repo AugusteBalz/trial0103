@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:trial0103/models/slider_widget.dart';
 import 'package:trial0103/widgets/log_mood_screen_one.dart';
 import 'package:trial0103/widgets/log_mood_screen_two.dart';
 import 'package:trial0103/widgets/user_mood.dart';
@@ -51,8 +52,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   //we save the userinput
 
-  final titleController = TextEditingController();
-  final amountController = TextEditingController();
+
 
   // Map<SecondaryMoods, int> allMoodLogs = {};
 
@@ -72,7 +72,8 @@ class _HomePageState extends State<HomePage> {
       body: SingleChildScrollView(
         child: Column(
           //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: const [
+          children:  [
+
             SizedBox(
               width: double.infinity,
               child: Card(
@@ -81,6 +82,12 @@ class _HomePageState extends State<HomePage> {
                 elevation: 5,
               ),
             ),
+
+
+
+
+
+
 
             //widget to select the moods from
             UserMood(),

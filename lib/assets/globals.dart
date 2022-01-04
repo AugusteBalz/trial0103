@@ -137,6 +137,11 @@ Map<PrimaryMoods, Color>  primaryColors= {
 };
 
 final List<MoodEntry> moodEntryList = [
+
+];
+
+
+final List<MoodEntry> moodEntryList2 = [
   MoodEntry(
     id: 'e1',
     dateTime: DateTime.now(),
@@ -172,7 +177,7 @@ final List<MoodEntry> moodEntryList = [
         color: Colors.yellow,
       ),
     ],
-  )
+  ),
 ];
 
 OneMood oneSubEmotion = OneMood(moodPrimary: PrimaryMoods.Love, moodSecondary: SecondaryMoods.joy_Proud, strength: 0, color: Colors.grey);
