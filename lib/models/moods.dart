@@ -40,7 +40,7 @@ enum SecondaryMoods {
   joy_Peaceful,
   joy_Pleased,
   joy_Eager,
-  joy_happy,
+  joy_Happy,
 
   //surprise
   surprise_Amazed,
@@ -59,6 +59,7 @@ enum SecondaryMoods {
 
   other_Empty,
   other_Shameful,
+  other_No_Emotion,
 }
 
 enum FearMood {

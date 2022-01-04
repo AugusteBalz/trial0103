@@ -7,23 +7,54 @@ import 'package:trial0103/models/moods.dart';
 import 'package:trial0103/models/one_mood.dart';
 import 'package:trial0103/assets/constants_of_mood.dart';
 
+List<String> displayMoods = [
+  "jelous",
+  "hurt",
+  "furious",
+  "mad",
+  "triggered",
 
+  //-------
 
-List<String> displayMoods = ['happy', 'hurt', 'sad'];
+  "scared",
+  "insecure",
+  "helpless",
+  "anxious",
+
+  //-------
+
+  "romantic",
+  "sentimental",
+  "appreciative",
+];
 
 List<String> selectedDisplayMoods = [];
 
 ConstantsOfMood wholeList = ConstantsOfMood();
 
 Map<String, BlueprintMood> nameToBlueprint = {
+  //ANGRY
+  "jelous": wholeList.JELOUS,
+  "hurt": wholeList.HURT,
+  "furious": wholeList.FURIOUS,
+  "mad": wholeList.MAD,
+  "triggered": wholeList.TRIGGERED,
 
-  "hurt" : wholeList.HURT,
-  "mad" : wholeList.MAD,
-  "lonely" : wholeList.LONELY,
-  "disappointed" : wholeList.DISAPPOINTED,
+  //FEAR
 
+  "scared": wholeList.SCARED,
+  "insecure": wholeList.INSECURE,
+  "helpless": wholeList.HELPLESS,
+  "anxious": wholeList.ANXIOUS,
 
+  //LOVE
 
+  "romantic": wholeList.ROMANTIC,
+  "sentimental": wholeList.SENTIMENTAL,
+  "appreciative": wholeList.APPRECIATIVE,
+
+  "lonely": wholeList.LONELY,
+  "disappointed": wholeList.DISAPPOINTED,
 };
 
 final List<MoodEntry> moodEntryList = [
@@ -45,7 +76,6 @@ final List<MoodEntry> moodEntryList = [
       ),
     ],
   ),
-
   MoodEntry(
     id: 'e2',
     dateTime: DateTime.now(),
@@ -65,4 +95,3 @@ final List<MoodEntry> moodEntryList = [
     ],
   )
 ];
-

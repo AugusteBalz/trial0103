@@ -3,41 +3,26 @@ import 'package:trial0103/assets/globals.dart';
 import 'package:trial0103/models/mood_entries.dart';
 import 'package:intl/intl.dart';
 
-
-
-
-
 class MoodLogList extends StatelessWidget {
-
-
-
   @override
   Widget build(BuildContext context) {
-    return  Column(
+    return Column(
       children: [
         Column(
           //map the list of transactions to the widgets
           //"for each moodlog "md" draw a widget"
-          children:
-
-          moodEntryList.map((entry) {
+          children: moodEntryList.map((entry) {
             //take off the time from the map key
-
-            print(entry.id);
 
             DateTime entryTime = entry.dateTime;
 
-
             return Column(
               children: [
-
                 Container(
-
                   margin: const EdgeInsets.symmetric(
                     vertical: 10,
                     horizontal: 15,
                   ),
-
                   child: Card(
                     elevation: 4,
                     shape: RoundedRectangleBorder(
@@ -45,16 +30,13 @@ class MoodLogList extends StatelessWidget {
                     ),
                     child: Column(
                       children: [
-
                         Container(
                           padding: const EdgeInsets.symmetric(
                             vertical: 10,
                             horizontal: 15,
                           ),
-
                           child: Text(
-                            DateFormat("MMM d, hh:mm")
-                                .format(entryTime),
+                            DateFormat("MMM d, hh:mm").format(entryTime),
                             //writes out the date
                             style: const TextStyle(
                                 fontWeight: FontWeight.bold,
@@ -66,14 +48,10 @@ class MoodLogList extends StatelessWidget {
                           //map the list of moods to the widgets
                           //"for each moodlog "md" draw a widget"
 
-                          children:
-
-                          entry.eachMood.map((md) {
+                          children: entry.eachMood.map((md) {
                             //previous output:
                             // "SecondaryMood.angry_jelous"
                             //this leaves it just with "jelous"
-
-
 
                             String temp = md.moodSecondary.toString();
                             String newMoodS = temp.substring(
@@ -97,78 +75,76 @@ class MoodLogList extends StatelessWidget {
                             //displaying widgets
 
                             return Container(
-
-
                                 child: Container(
-                                  margin: const EdgeInsets.symmetric(
-                                    vertical: 10,
-                                    horizontal: 15,
-                                  ),
-                                  padding: EdgeInsets.symmetric(
-                                      vertical: 1, horizontal: 10),
-                                  child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      Container(
-                                        padding: EdgeInsets.all(5),
-                                        child: Row(
-                                          mainAxisAlignment:
+                              margin: const EdgeInsets.symmetric(
+                                vertical: 10,
+                                horizontal: 15,
+                              ),
+                              padding: EdgeInsets.symmetric(
+                                  vertical: 1, horizontal: 10),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Container(
+                                    padding: EdgeInsets.all(5),
+                                    child: Row(
+                                      mainAxisAlignment:
                                           MainAxisAlignment.spaceBetween,
-                                          children: [
-                                            //primary mood
-                                            Container(
-                                              child: Text(newMoodP,
-                                                  style: TextStyle(
-                                                    fontWeight: FontWeight.bold,
-                                                    fontSize: 10,
-                                                    color: Colors.lightBlueAccent,
-                                                  )),
-                                            ),
-
-                                            //the date
-
-
-                                          ],
+                                      children: [
+                                        //primary mood
+                                        Container(
+                                          child: Text(newMoodP,
+                                              style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 10,
+                                                color: myColor,
+                                              )),
                                         ),
-                                      ),
-                                      Container(
-                                        padding: EdgeInsets.symmetric(
-                                            vertical: 8, horizontal: 5),
-                                        child: Row(
-                                          mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                          children: [
-                                            //secondary mood
-                                            Container(
-                                              child: Text(
-                                                newMoodS,
-                                                // style: GoogleFonts.lato(fontStyle: FontStyle.italic, fontSize: 25)
-                                              ),
-                                            ),
 
-                                            //its strenght
-                                            Container(
-                                              child: Text(
-                                                subStrenght.toString(),
-                                                style: TextStyle(
-                                                    fontWeight: FontWeight.bold,
-                                                    fontSize: 25,
-                                                    color: myColor),
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ],
+                                        //the date
+                                      ],
+                                    ),
                                   ),
-                                )
+                                  Container(
+                                    padding: EdgeInsets.symmetric(
+                                        vertical: 8, horizontal: 5),
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        //secondary mood
+                                        Container(
+                                          child: Text(
+                                            newMoodS,
+                                            // style: GoogleFonts.lato(fontStyle: FontStyle.italic, fontSize: )
 
-                              //Text(newMood),
+                                            style: const TextStyle(
+                                              fontSize: 20,
+                                            ),
+                                          ),
+                                        ),
 
-                            );
+                                        //its strenght
+                                        Container(
+                                          child: Text(
+                                            subStrenght.toString(),
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 25,
+                                                color: myColor),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            )
+
+                                //Text(newMood),
+
+                                );
                           }).toList(),
-
-
                         ),
                       ],
                     ),
@@ -181,8 +157,7 @@ class MoodLogList extends StatelessWidget {
       ],
     );
 
-
-      /*
+    /*
       Column(
       children: moodEntries.map((tx) {
         return Card(

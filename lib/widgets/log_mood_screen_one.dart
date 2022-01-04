@@ -16,7 +16,7 @@ class LogMoodScreenOne extends StatefulWidget {
 }
 
 class _LogMoodScreenOneState extends State<LogMoodScreenOne> {
-  void _addNewMoodEntry(String txTitle, double txAmount) {
+  void _addNewMoodEntry() {
     //default blueprint
 
     BlueprintMood? temporaryMood = defaultBlueprint;
