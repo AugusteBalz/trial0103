@@ -8,7 +8,6 @@ import 'package:trial0103/widgets/log_mood_screen_one.dart';
 import 'package:trial0103/widgets/moodlog_list.dart';
 import 'package:trial0103/widgets/new_mood.dart';
 
-
 class UserMood extends StatefulWidget {
   const UserMood({Key? key}) : super(key: key);
 
@@ -17,31 +16,22 @@ class UserMood extends StatefulWidget {
 }
 
 class _UserMoodState extends State<UserMood> {
-
-
-
-
-
-
-
-
-
-
-
   @override
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
-        ElevatedButton(onPressed: (){
+        ElevatedButton(
+          child: Text("Log emotions"),
+          onPressed: () async {
+            final value = await Navigator.pushNamed(context, '/ooo');
 
-          Navigator.pushNamed(context, '/ooo');
-
-        }, child: Text("Log emotions")),
-
+            setState(() {
+              MoodLogList();
+            });
+          },
+        ),
         MoodLogList(),
       ],
     );
   }
 }
-
-

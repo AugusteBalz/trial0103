@@ -32,7 +32,7 @@ class NewMood extends StatelessWidget {
               controller: amountController,
             ),
             TextButton(
-              child: Text("Log Mood"),
+              child: Text("Log Mood // Done"),
               style: TextButton.styleFrom(
                 padding: const EdgeInsets.all(16.0),
                 primary: Colors.deepPurple,
@@ -43,6 +43,8 @@ class NewMood extends StatelessWidget {
                   titleController.text,
                   double.parse(amountController.text),
                 );
+
+                Navigator.pop(context);
 
               },
             )
