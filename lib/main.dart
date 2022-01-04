@@ -1,11 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:trial0103/widgets/log_mood_screen_one.dart';
 import 'package:trial0103/widgets/user_mood.dart';
 
-
 void main() {
-
-  runApp(const MyApp());
+  runApp(
+    MaterialApp(
+      title: 'Named Routes Demo',
+      // Start the app with the "/" named route. In this case, the app starts
+      // on the FirstScreen widget.
+      initialRoute: '/',
+      routes: {
+        // When navigating to the "/" route, build the FirstScreen widget.
+        '/': (context) => const MyApp(),
+        // When navigating to the "/second" route, build the SecondScreen widget.
+        '/ooo': (context) => const LogMoodScreenOne(),
+      },
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -15,13 +27,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(
         SystemUiOverlayStyle(statusBarColor: Colors.transparent
-          //color set to transperent or set your own color
-        ));
+            //color set to transperent or set your own color
+            ));
 
-    return const MaterialApp(
-      title: 'Flutter Demo',
-      home: HomePage(),
-    );
+    return HomePage();
   }
 }
 
@@ -33,9 +42,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-
-
-
   //we save the userinput
 
   final titleController = TextEditingController();
@@ -71,8 +77,6 @@ class _HomePageState extends State<HomePage> {
 
             //widget to select the moods from
             UserMood(),
-
-
           ],
         ),
       ),

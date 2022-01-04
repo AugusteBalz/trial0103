@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:trial0103/assets/globals.dart';
 import 'package:trial0103/models/mood_entries.dart';
 import 'package:intl/intl.dart';
 
@@ -7,9 +8,6 @@ import 'package:intl/intl.dart';
 
 
 class MoodLogList extends StatelessWidget {
-  final List<MoodEntry> moodEntries;
-
-  MoodLogList(this.moodEntries);
 
 
 
@@ -22,7 +20,7 @@ class MoodLogList extends StatelessWidget {
           //"for each moodlog "md" draw a widget"
           children:
 
-          moodEntries.map((entry) {
+          moodEntryList.map((entry) {
             //take off the time from the map key
 
             print(entry.id);

@@ -43,6 +43,7 @@ class NewMood extends StatelessWidget {
                   titleController.text,
                   double.parse(amountController.text),
                 );
+
               },
             )
           ],
