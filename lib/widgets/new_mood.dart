@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'display_multi_selection.dart';
+
 
 class NewMood extends StatelessWidget {
   final Function addMood;
@@ -18,19 +20,8 @@ class NewMood extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
-            TextField(
-              decoration: InputDecoration(
-                labelText: 'emotion',
-              ),
-              //takes the user input
-              controller: titleController,
-            ),
-            TextField(
-              decoration: InputDecoration(
-                labelText: 'strength',
-              ),
-              controller: amountController,
-            ),
+            DisplayMultiSelection(),
+
             TextButton(
               child: Text("Log Mood // Done"),
               style: TextButton.styleFrom(
@@ -40,8 +31,8 @@ class NewMood extends StatelessWidget {
               ),
               onPressed: () {
                 addMood(
-                  titleController.text,
-                  double.parse(amountController.text),
+                  "had",
+                  double.parse("3"),
                 );
 
                 Navigator.pop(context);
@@ -54,3 +45,4 @@ class NewMood extends StatelessWidget {
     );
   }
 }
+

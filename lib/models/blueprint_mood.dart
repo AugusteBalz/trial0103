@@ -1,13 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-
 import 'package:trial0103/models/moods.dart';
 
-
-
 class BlueprintMood {
-
   String name;
   PrimaryMoods moodPrimary;
   SecondaryMoods moodSecondary;
@@ -20,3 +16,9 @@ class BlueprintMood {
     required this.color,
   });
 }
+
+BlueprintMood defaultBlueprint = BlueprintMood(
+    name: "happy",
+    moodPrimary: PrimaryMoods.Joy,
+    moodSecondary: SecondaryMoods.joy_happy,
+    color: Colors.yellow);

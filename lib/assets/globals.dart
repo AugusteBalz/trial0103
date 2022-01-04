@@ -9,7 +9,7 @@ import 'package:trial0103/assets/constants_of_mood.dart';
 
 
 
-List<String> displayMoods = [];
+List<String> displayMoods = ['happy', 'hurt', 'sad'];
 
 List<String> selectedDisplayMoods = [];
 
