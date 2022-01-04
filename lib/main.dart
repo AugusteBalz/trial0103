@@ -14,7 +14,9 @@ void main() {
         // When navigating to the "/" route, build the FirstScreen widget.
         '/': (context) => const MyApp(),
         // When navigating to the "/second" route, build the SecondScreen widget.
+        //TODO: does not work with any other name than this, wth???
         '/ooo': (context) => const LogMoodScreenOne(),
+
       },
     ),
   );
