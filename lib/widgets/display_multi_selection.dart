@@ -19,25 +19,9 @@ class _DisplayMultiSelectionState extends State<DisplayMultiSelection> {
       displayMoods,
       onSelectionChanged: (selectedList) {
         setState(() {
-          SecondaryMoods mood = SecondaryMoods.angry_Default;
 
           selectedDisplayMoods = [...selectedList];
 
-
-
-
-          /*for (String name in selectedList) {
-            mood = mapSMoodToName[name] ?? SecondaryMoods.angry_Default;
-
-            //TODO: fix this to be dynamical
-            temporaryEntry.eachMood.add(OneMood(
-                moodPrimary: PrimaryMoods.Other,
-                strength: 5,
-                moodSecondary: mood,
-                color: Colors.green));
-          }
-
-           */
         });
       },
 

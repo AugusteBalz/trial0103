@@ -11,6 +11,8 @@ class MoodLogList extends StatelessWidget {
         Column(
           //map the list of transactions to the widgets
           //"for each moodlog "md" draw a widget"
+
+
           children: moodEntryList.map((entry) {
             //take off the time from the map key
 
@@ -156,64 +158,5 @@ class MoodLogList extends StatelessWidget {
         ),
       ],
     );
-
-    /*
-      Column(
-      children: moodEntries.map((tx) {
-        return Card(
-          child: Row(
-            children: [
-              Container(
-                margin: EdgeInsets.symmetric(
-                  vertical: 10,
-                  horizontal: 15,
-                ),
-                decoration: BoxDecoration(
-                    border: Border.all(
-                      color: Colors.deepPurpleAccent,
-                      width: 2,
-                    )),
-                padding: EdgeInsets.all(10),
-                child: Text(
-                  //tx.amount.toString(), or
-                  tx.id,
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 19,
-                    color: Colors.deepPurple,
-                  ),
-                ),
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    tx.id,
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black,
-                    ),
-                  ),
-                  Text(
-                    DateFormat.yMMMd().format(tx.dateTime),
-                    style: TextStyle(
-                      fontSize: 14,
-                      //fontWeight: FontWeight.bold,
-                      color: Colors.grey,
-                    ),
-                  ),
-                ],
-              )
-            ],
-          ),
-        );
-      }).toList(),
-    );
-
-
-
-
-    */
   }
 }

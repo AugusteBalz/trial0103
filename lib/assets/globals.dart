@@ -174,3 +174,7 @@ final List<MoodEntry> moodEntryList = [
     ],
   )
 ];
+
+String oneSubEmotion = "help pls";
+
+MoodEntry oneEntry = MoodEntry(id: "a1", dateTime: DateTime.now(), eachMood: []);

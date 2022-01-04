@@ -16,7 +16,7 @@ class NewMood extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
-            DisplayMultiSelection(),
+
             TextButton(
               child: Text("Log Mood // Done"),
               style: TextButton.styleFrom(

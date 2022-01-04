@@ -23,7 +23,7 @@ class _UserMoodState extends State<UserMood> {
         ElevatedButton(
           child: Text("Log emotions"),
           onPressed: () async {
-            final value = await Navigator.pushNamed(context, '/ooo');
+            final value = await Navigator.pushNamed(context, '/logmood1');
 
             setState(() {
               MoodLogList();

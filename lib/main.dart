@@ -1,21 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:trial0103/widgets/log_mood_screen_one.dart';
+import 'package:trial0103/widgets/log_mood_screen_two.dart';
 import 'package:trial0103/widgets/user_mood.dart';
 
 void main() {
   runApp(
     MaterialApp(
-      title: 'Named Routes Demo',
-      // Start the app with the "/" named route. In this case, the app starts
-      // on the FirstScreen widget.
+      title: 'Blossom',
+
       initialRoute: '/',
       routes: {
         // When navigating to the "/" route, build the FirstScreen widget.
         '/': (context) => const MyApp(),
-        // When navigating to the "/second" route, build the SecondScreen widget.
-        //TODO: does not work with any other name than this, wth???
-        '/ooo': (context) => const LogMoodScreenOne(),
+
+        //to multiselect mood log
+
+        '/logmood1': (context) => const LogMoodScreenOne(),
+
+        '/logmood2': (context) => const LogMoodScreenTwo(),
+
+
 
       },
     ),

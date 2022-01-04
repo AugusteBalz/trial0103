@@ -5,6 +5,7 @@ import 'package:trial0103/models/blueprint_mood.dart';
 import 'package:trial0103/models/mood_entries.dart';
 import 'package:trial0103/models/moods.dart';
 import 'package:trial0103/models/one_mood.dart';
+import 'package:trial0103/widgets/display_multi_selection.dart';
 import 'package:trial0103/widgets/moodlog_list.dart';
 import 'package:trial0103/widgets/new_mood.dart';
 
@@ -16,6 +17,7 @@ class LogMoodScreenOne extends StatefulWidget {
 }
 
 class _LogMoodScreenOneState extends State<LogMoodScreenOne> {
+
   void _addNewMoodEntry() {
     //default blueprint
 
@@ -23,8 +25,10 @@ class _LogMoodScreenOneState extends State<LogMoodScreenOne> {
 
     final MoodEntry newEntry =
 
-        //TODO: fix that ids would be calculated dynamically
-        MoodEntry(id: "k1", dateTime: DateTime.now(), eachMood: []);
+    //TODO: fix that ids would be calculated dynamically
+    MoodEntry(id: "k1", dateTime: DateTime.now(), eachMood: []);
+
+    oneEntry = newEntry;
 
     setState(() {
       for (String emotion in selectedDisplayMoods) {
@@ -33,7 +37,7 @@ class _LogMoodScreenOneState extends State<LogMoodScreenOne> {
         if (nameToBlueprint.containsKey(emotion)) {
 
           temporaryMood = nameToBlueprint[emotion];
-          newEntry.eachMood.add(
+          oneEntry.eachMood.add(
             OneMood(
               moodPrimary: temporaryMood!.moodPrimary,
               moodSecondary: temporaryMood!.moodSecondary,
@@ -46,7 +50,7 @@ class _LogMoodScreenOneState extends State<LogMoodScreenOne> {
         else {
 
           //add one new mood
-          newEntry.eachMood.add(OneMood(
+          oneEntry.eachMood.add(OneMood(
               moodPrimary: PrimaryMoods.Joy,
               moodSecondary: SecondaryMoods.joy_Proud,
               strength: 10,
@@ -56,22 +60,38 @@ class _LogMoodScreenOneState extends State<LogMoodScreenOne> {
 
       }
 
-      // moodEntryListlocal.add(newEntry);
-      //puts it reversed
-      moodEntryList.insert(0, newEntry);
     });
   }
+
+
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Second Route"),
+        title: const Text("Pick mood"),
+
+        actions: <Widget>[
+          Padding(
+              padding: EdgeInsets.only(right: 20.0, top: 15),
+              child: GestureDetector(
+                onTap: () {
+
+                  _addNewMoodEntry();
+                  Navigator.pushNamed(context, "/logmood2");
+                },
+                child: Text(
+                  "Next",
+                  style: TextStyle(fontSize: 20),
+                ),
+              )
+          ),
+        ],
       ),
       body: Center(
         child: Column(
           children: [
-            NewMood(_addNewMoodEntry),
+            DisplayMultiSelection(),
           ],
         ),
       ),
