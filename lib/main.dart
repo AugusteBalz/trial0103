@@ -56,23 +56,25 @@ class _HomePageState extends State<HomePage> {
 
         brightness: Brightness.light,
       ),
-      body: Column(
-        //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: const [
-          SizedBox(
-            width: double.infinity,
-            child: Card(
-              color: Colors.blue,
-              child: Text("Hello my beautiful stranger!"),
-              elevation: 5,
+      body: SingleChildScrollView(
+        child: Column(
+          //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: const [
+            SizedBox(
+              width: double.infinity,
+              child: Card(
+                color: Colors.blue,
+                child: Text("Hello my beautiful stranger!"),
+                elevation: 5,
+              ),
             ),
-          ),
 
-          //widget to select the moods from
-          UserMood(),
+            //widget to select the moods from
+            UserMood(),
 
 
-        ],
+          ],
+        ),
       ),
     );
   }
