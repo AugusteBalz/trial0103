@@ -26,7 +26,7 @@ class _LogMoodScreenTwoState extends State<LogMoodScreenTwo> {
     });
   }
 
-  double currentSliderValue = 1;
+ // double currentSliderValue = 1;
 
   @override
   Widget build(BuildContext context) {

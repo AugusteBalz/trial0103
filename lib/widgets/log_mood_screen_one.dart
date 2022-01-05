@@ -41,7 +41,7 @@ class _LogMoodScreenOneState extends State<LogMoodScreenOne> {
             OneMood(
               moodPrimary: temporaryMood!.moodPrimary,
               moodSecondary: temporaryMood!.moodSecondary,
-              strength: 5,
+              strength: 0,
               color: temporaryMood!.color,
             ),
           );

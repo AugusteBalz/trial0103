@@ -48,6 +48,7 @@ class _SliderWidgetState extends State<SliderWidget> {
                     activeTrackColor: widget.md.color.withOpacity(1),
                     inactiveTrackColor: widget.md.color.withOpacity(.5),
 
+
                     trackHeight: 4.0,
                     thumbShape: CustomSliderThumbCircle(
                       thumbRadius: widget.sliderHeight * .4,
@@ -56,24 +57,17 @@ class _SliderWidgetState extends State<SliderWidget> {
                     ),
                     overlayColor: widget.md.color.withOpacity(.4),
                     //valueIndicatorColor: Colors.white,
-                    activeTickMarkColor: Colors.white,
-                    inactiveTickMarkColor: Colors.red.withOpacity(.7),
+                    activeTickMarkColor: widget.md.color.withOpacity(1),
+                    inactiveTickMarkColor: widget.md.color.withOpacity(.5),
                   ),
                   child: Slider(
+                    divisions: 10,
                       value: _value,
                       onChanged: (value) {
                         setState(() {
 
-                          //TODO: why doesnt it work with 7 and up??????
 
-                          int kvakva = (value*10).toInt() + 1;
-
-                          if (kvakva == 11){
-                            widget.md.strength =10;
-                          }
-                          else {
-                            widget.md.strength = kvakva;
-                          }
+                            widget.md.strength = (value*10).toInt();
 
                           _value = value;
                         });
