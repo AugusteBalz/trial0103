@@ -14,9 +14,7 @@ class DisplayOneSlider extends StatefulWidget {
 }
 
 class _DisplayOneSliderState extends State<DisplayOneSlider> {
-  //TODO: is this a good way to pass this argument?
 
-  double currentSliderValue = 1;
 
   @override
   Widget build(BuildContext context) {

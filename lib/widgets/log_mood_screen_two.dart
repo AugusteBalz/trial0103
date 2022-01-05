@@ -60,10 +60,6 @@ class _LogMoodScreenTwoState extends State<LogMoodScreenTwo> {
           child: Center(
 
             child: Column(
-              //map the list of moods to the widgets
-              //"for each moodlog "md" draw a widget"
-
-              //TODO: herre
 
               children: oneEntry.eachMood.map((md) {
                 //previous output:
@@ -80,13 +76,8 @@ class _LogMoodScreenTwoState extends State<LogMoodScreenTwo> {
                 String newMoodP =
                     temp2.substring((temp2.indexOf(".") + 1), temp2.length);
 
-                //TODO: add actual strength and not a random number == it should work now??
-                int subStrenght = md.strength;
-                // String somtheing = "${md.strength}"; // string interpolation?
-
                 //color
 
-                //TODO: same here just with color
                 Color myColor = md.color;
 
                 //displaying widgets
