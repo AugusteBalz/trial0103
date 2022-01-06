@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:trial0103/assets/globals.dart';
 import 'package:trial0103/models/moods.dart';
 import 'package:trial0103/models/one_mood.dart';
-import 'package:trial0103/widgets/multi_select_chip2.dart';
+import 'package:trial0103/widgets/mood/multi_select_chip2.dart';
 
 
 class DisplayMultiSelection extends StatefulWidget {

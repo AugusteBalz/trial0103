@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:trial0103/assets/globals.dart';
-import 'package:trial0103/widgets/display_one_slider.dart';
+import 'package:trial0103/widgets/mood/display_one_slider.dart';
 
 
 

@@ -5,10 +5,10 @@ import 'package:trial0103/models/blueprint_mood.dart';
 import 'package:trial0103/models/mood_entries.dart';
 import 'package:trial0103/models/moods.dart';
 import 'package:trial0103/models/one_mood.dart';
-import 'package:trial0103/widgets/display_mood_sliders.dart';
-import 'package:trial0103/widgets/display_one_slider.dart';
-import 'package:trial0103/widgets/moodlog_list.dart';
-import 'package:trial0103/widgets/new_mood.dart';
+import 'package:trial0103/widgets/mood/display_mood_sliders.dart';
+import 'package:trial0103/widgets/mood/display_one_slider.dart';
+import 'package:trial0103/widgets/mood/moodlog_list.dart';
+import 'package:trial0103/widgets/mood/new_mood.dart';
 
 class LogMoodScreenTwo extends StatefulWidget {
   const LogMoodScreenTwo({Key? key}) : super(key: key);
